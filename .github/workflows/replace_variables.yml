@@ -59,7 +59,7 @@ jobs:
           mv $REPO_NAME/* .
           # And .gitignore too:
           mv $REPO_NAME/.gitignore .
-          # Now remove the empty datasette-x directory:
+          # Now remove the empty directory:
           rm -rf $REPO_NAME
 
       - name: Force push new repo contents
