@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-cookiecutter:
-    if: ${{ github.repository != 'dev-paraboly/fastapi-boilerplate-template:poetry' }}
+    if: ${{ github.repository != 'dev-paraboly/fastapi-boilerplate-template' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -50,7 +50,7 @@ jobs:
           rm -rf .github
           export REPO_NAME=$(echo $INFO | jq -r '.repository.name')
           # Run cookiecutter
-          cookiecutter gh:dev-paraboly/python-backend-boilerplate:poetry --no-input \
+          cookiecutter gh:dev-paraboly/python-backend-boilerplate --no-input \
             app_name=$(echo $INFO | jq -r '.repository.name') \
             description="$(echo $INFO | jq -r .repository.description)" \
             github_username="$(echo $INFO | jq -r .repository.owner.login)" \
