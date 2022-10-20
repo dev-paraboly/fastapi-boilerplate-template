@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-cookiecutter:
-    if: ${{ github.repository != 'dev-paraboly/fastapi-boilerplate-template' }}
+    if: ${{ github.repository != 'dev-paraboly/fastapi-boilerplate-template:poetry' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
