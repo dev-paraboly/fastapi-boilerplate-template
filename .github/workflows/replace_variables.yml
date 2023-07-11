@@ -67,6 +67,4 @@ jobs:
         with:
           commit_message: "Initial plugin structure"
           push_options: --force
-          username: "akilavuz"
-          GITHUB_TOKEN: "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"
           
